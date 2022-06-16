@@ -7,8 +7,8 @@ function ExpenseItem(props) {
     const year = props.date.getFullYear();
   return (
     <div className="expense-item">
-      <div>{month}</div>
-      <div>{year}</div>
+      <div>{month}, </div>
+      <div>{year}, </div>
       <div>{day}</div>
       <div className='expense-item__description'>
         <h2>{props.title}</h2>
