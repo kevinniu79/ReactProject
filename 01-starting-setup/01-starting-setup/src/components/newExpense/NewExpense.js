@@ -4,9 +4,17 @@ import ExpenseForm from './ExpenseForm';
 
 function NewExpense(){
 
+    function saveExpenseDataHandler(enteredExpenseData){
+
+        const expenseData = {
+            ...enteredExpenseData,
+            id:Math.random().toString()
+        };
+        console.log(expenseData);
+    }
     return(
         <div className='new-expense'>
-            <ExpenseForm></ExpenseForm>
+            <ExpenseForm onSaveExpenseData={saveExpenseDataHandler}></ExpenseForm>
         </div>
 
     )
