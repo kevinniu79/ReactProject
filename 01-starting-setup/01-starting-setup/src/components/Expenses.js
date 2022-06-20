@@ -7,8 +7,7 @@ import ExpensesFilter from './newExpense/ExpensesFilter.js';
 function Expenses(props) {
 
     function filterChangeHandler(selectedYear){
-        console.log('in expenses');
-        console.log(selectedYear);
+        setFilteredYear(selectedYear);
     }
     return (
         <Card className='expenses'>
