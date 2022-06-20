@@ -16,6 +16,7 @@ function filterChangeHandler(selectedYear) {
       <ExpenseFilter selected={filteredYear} onFilterChange={filterChangeHandler}></ExpenseFilter>
       {props.items.map((expensesElement) => (
         <ExpenseItem
+          key={expensesElement.id}
           title={expensesElement.title}
           amount={expensesElement.amount}
           date={expensesElement.date}
