@@ -3,6 +3,7 @@ import './Expenses.css';
 import ExpenseItem from "./ExpenseItem";
 import Card from './Card.js';
 import ExpensesFilter from "./newExpense/ExpensesFilter";
+import ExpenseList from "./ExpenseList";
 
 function Expenses(props) {
 
@@ -18,18 +19,11 @@ function Expenses(props) {
 
     return (
         <Card className="expenses">
-            <ExpensesFilter selected={filteredYear} onFilterChange={filterChangeHandler}></ExpensesFilter>
-            {filteredExpenses.map((expensesElement) => (
-                <ExpenseItem
-                    key={expensesElement.id}
-                    title={expensesElement.title}
-                    amount={expensesElement.amount}
-                    date={expensesElement.date}
-                ></ExpenseItem>
-            ))}
+            <ExpensesFilter selected={filteredYear} onFilterChange={filterChangeHandler}
+            ></ExpensesFilter>
+            <ExpenseList items={filteredExpenses}></ExpenseList>
         </Card>
     );
-
 }
 
 export default Expenses;
