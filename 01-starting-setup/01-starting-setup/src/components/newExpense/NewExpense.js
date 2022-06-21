@@ -13,10 +13,8 @@ function NewExpense(props) {
             id: Math.random().toString()
         };
         props.onAddExpense(expenseData);
-    }
-
-    props.onAddExpense(expenseData);
-    setIsEditing(false);
+        setIsEditing(false);
+    };
 
     function startEditingHandler() {
         setIsEditing(true);
